@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Projecte Integrat">
+	<meta name="author" content="Alba Yñiguez">
+	<meta name="keywords" content="proyecto, web, interactiva, valor">
+	<meta name="revised" content="Marzo 2022">
+	<link rel="stylesheet" type="text/css" href="CSS/contacto.css">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/all.min.css">
+
+	<!-- Favicon-->
+	<link href="IMG/favicon.png" rel="icon" type="image/x-icon" />
+	<title>Mission: Save the chocolate</title>
+</head>
+<body>
+	
+<div id="part1">
+<!-- CABECERA -->
+	<nav id="cabecera">
+		<div class="logo">
+			<a href="index.html"><img src="IMG/logo.png" alt="logo"></a>
+		</div>
+
+		<div class="logo_instagram">
+			<i class="fa-brands fa-instagram"></i>
+		</div>
+
+		<div id="menuArea">
+   			<input type="checkbox" id="menuToggle"></input>
+
+  			<label for="menuToggle" class="menuOpen">
+    			<div class="open"></div>
+  			</label>
+
+  			<div class="menu menuEffects">
+    			<label for="menuToggle"></label>
+    			<div class="menuContent">
+      			<ul>
+        			<li><a href="about.html">ABOUT US</a></li>
+        			<li><a href="misiones.html">MISSIONS</a></li>
+        			<li><a href="contacto.html">CONTACT</a></li>
+      			</ul>
+    		</div>
+  		</div> 
+	</nav>
+
+
+
+<h2>CONTACTO</h2>
+</div>
+
+<!-- FORMULARIO -->
+<h3>¡Si tienes cualquier duda, escríbenos!</h3>
+<div class="container">
+	<div class="contact">
+		<form id="contact-form" action="#modal">
+
+			<p>
+				<label>Nombre</label>
+				<textarea type="text" id="nom" required></textarea>
+			</p>
+
+			<p>
+				<label>Apellidos</label>
+				<textarea type="text" id="cognom"></textarea>
+			</p>
+
+			<p>
+				<label>Correo</label>
+				<textarea type="email" id="email" required></textarea>
+			</p>
+
+			<p>
+				<label>Número</label>
+				<textarea type="text" id="numero"></textarea>
+			</p>
+
+			<p class="full">
+				<label>Mensaje</label>
+				<textarea id="missatge"></textarea>
+			</p>
+
+			<p id="botonEnviarContacto" class="full">
+				<button type="submit">ENVIAR</button></form>
+			</p>
+
+		</form>
+	</div>
+</div>
+
+
+<!--POPUP ENVIAR CONTACTE -->
+<div class="container-all" id="modal">
+	<div class="popup">
+		<div class="container-text" id="popup">
+			<h1>Tu mensaje ha sido enviado correctamente</h1>
+		</div>
+
+		<a href="contacto.html" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+	</div>
+</div>
+
+<!-- FOOTER -->
+	<section id="footer">
+		<div class="logo">
+			<a href="index.html" ><img src="IMG/logo.png" alt="logo"></a>
+		</div>
+		<div class="texto_footer">
+			<p>Copyright 2022 - Fet per Alba Yñiguez</p>
+		</div>
+	</section>
+</body>
+</html>

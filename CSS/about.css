@@ -1,0 +1,621 @@
+@font-face
+{
+	font-family: Oswald_Bold;
+	src: url("../fonts/Oswald-Bold.ttf");
+}
+
+@font-face
+{
+	font-family: Oswald_SemiBold;
+	src: url("../fonts/Oswald-SemiBold.ttf");
+}
+
+@font-face
+{
+	font-family: Oswald_Regular;
+	src: url("../fonts/Oswald-Regular.ttf");
+}
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/************************************************************************************/
+
+/*CAPÇELERA*/
+
+#part1
+{
+	width: 100%;
+  height: 1080px;
+/*	background-color: #F4DCC2;*/
+ 	background-image: url(../IMG/pexels-david-riaño-cortés-975771.jpg);
+ 	background-size: cover;
+}
+
+#cabecera 
+{
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+.logo img
+{
+	width: 120px;
+	height: auto;
+	cursor: pointer;
+	position: absolute;
+	left: 50px;
+	bottom: 10px;	
+  top: 30px;
+}
+
+
+/*MENU*/
+
+input 
+{
+  display: none;
+}
+
+.open 
+{
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.open:before 
+{
+  content: "";
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after 
+{
+  content: "";
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen 
+{
+  width: 24px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+}
+
+.menuOpen:hover .open:before 
+{
+  top: -9px;
+  background-color: #616D38;
+}
+
+.menuOpen:hover .open:after 
+{
+  top: 5px;
+  background-color: #616D38;
+}
+
+.menuOpen:hover .open:hover
+{
+  background-color: #616D38;
+}
+
+.menu 
+{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #616D38;
+  z-index: 899;
+}
+
+.menu label 
+{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent 
+{
+  position: relative;
+  top: 25%;
+  text-align: left;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+.menu ul 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a 
+{
+  display: block;
+  color: #E2BB80;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-left: 50px;
+  font-family: Oswald_Bold;
+  font-size: 120px;
+  text-align: center;
+}
+
+.menu ul li a:hover 
+{
+  color: #616D38;
+}
+
+.menu ul li:hover 
+{
+  background: #E2BB80;
+}
+
+.menuEffects 
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul 
+{
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects 
+{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul 
+{
+  opacity: 1;
+}
+
+
+#menuToggle:checked ~ .menuOpen .open 
+{
+  background-color: transparent;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before 
+{
+  content: "";
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after 
+{
+  content: "";
+  background-color: black;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  /*z-index: 1;*/
+  z-index: 999;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul 
+{
+  transform: translateY(-30%);
+}
+
+
+
+
+/*HERO*/
+#hero
+{
+	margin-bottom: 40px;
+	margin-top: 50px;
+	/*background-color: pink;*/
+	height: 100px;
+}
+
+.titulo_hero
+{
+	font-family: Oswald_Bold;
+	font-size: 80px;
+	text-align: center;
+}
+
+
+/*TEXTOS*/
+.texto1
+{
+	width:50%;
+	height: 100px;
+	/*background-color: blueviolet;*/
+	font-family: Oswald_SemiBold, sans-serif;
+	font-size: 35px;
+	text-align: center;
+  margin-left: 25%;
+	color: black;
+}
+
+.texto2
+{
+	width: 58%;
+	height: 227px;
+	/*background-color: royalblue;*/
+	font-family: Oswald_Regular	, sans-serif;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 90px;
+  margin-left: 20%;
+
+}
+
+
+/*DATOS*/
+#datos
+{
+	width: 100%;
+	height: 150px;
+	/*background-color: cadetblue;*/
+	display: inline-flex;
+
+}
+
+.dato_arbol, .dato_familia,
+.dato_aire
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#part2
+{
+  width: 100%;
+  height: 1700px;
+
+}
+
+#datos h2
+{
+	font-family: Oswald_SemiBold, sans-serif;
+	font-size: 60px;
+	text-align: center;
+	color: whitesmoke;
+}
+
+#datos h3
+{
+	font-family: Oswald_Regular, sans-serif;
+	font-size: 40px;
+	text-align: center;
+	color: whitesmoke;
+}
+
+#texto2
+{
+	width: 100%;
+	height: 350px;
+  margin-top: 50px;
+}
+
+.titulo_texto2
+{
+  font-family: Oswald_SemiBold, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: black;
+}
+
+.parrafo_texto2
+{
+  width: 60%;
+  height: 227px;
+  /*background-color: royalblue;*/
+  font-family: Oswald_Regular , sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 35px;
+  margin-left: 20%;
+
+}
+
+
+#texto3
+{
+  width: 100%;
+  height: 350px;
+  top: 30px;
+  position: relative;
+  left: 30px;
+}
+
+.titulo_texto3
+{
+  position: absolute;
+  font-family: Oswald_SemiBold, sans-serif;
+  font-size: 40px;
+  text-align: left;
+  color: black;
+  left: 70px;
+}
+
+.parrafo_texto3
+{ 
+  position: absolute;
+  width: 70%;
+  height: auto;
+  /*background-color: royalblue;*/
+  font-family: Oswald_Regular , sans-serif;
+  font-size: 25px;
+  text-align: left;
+  left: 70px;
+  top: 70px;
+  padding-right: 20%;
+
+
+}
+
+.imagen_texto3
+{
+  position: absolute;
+  width: 40%;
+  height: auto;
+  float: right;
+  left: 55%;
+  border-radius: 40px;
+  color: hotpink;
+  border-style: solid;
+  border-width: 5px;
+
+}
+
+
+#texto4
+{
+  width: 100%;
+  height: 350px;
+  top: 300px;
+  position: relative;
+  left: 30px;
+}
+
+.titulo_texto4
+{
+  position: absolute;
+  font-family: Oswald_SemiBold, sans-serif;
+  font-size: 40px;
+  text-align: left;
+  color: black;
+  right: 25%;
+}
+
+.parrafo_texto4
+{ 
+  position: absolute;
+  width: 50%;
+  height: auto;
+  /*background-color: royalblue;*/
+  font-family: Oswald_Regular , sans-serif;
+  font-size: 25px;
+  text-align: left;
+  right: 5%;
+  top: 70px;
+}
+
+.imagen_texto4
+{
+  position: absolute;
+  width: 729.6px;
+  height: auto;
+  float: right;
+  left: 50px;
+  border-radius: 40px;
+  color: hotpink;
+  border-style: solid;
+  border-width: 5px;
+
+}
+
+#descubrir_Treedom
+{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.titulo_descubrir
+{
+  font-family: Oswald_Regular, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.boton_Treedom
+{
+  width: 400px;
+  height: 60px;
+  border-style: solid;
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 50px;
+  border-radius: 0 25px 0 0;
+  font-family: Oswald_SemiBold;
+  font-size: 25px;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 25px;
+  padding-top: 8px;
+}
+
+
+.boton_Treedom:hover
+{
+  background-color: #616D38;
+  color: white;
+}
+
+
+#contenedor_participar
+{
+  width: 100%;
+  height: 500px;
+  background-color: hotpink;
+}
+
+.titulo_Participar
+{
+  font-family: Oswald_SemiBold, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+
+.partes
+{
+  font-family: Oswald_Regular;
+  font-size: 40px;
+  color: white;
+  width: 300px;
+  display: inline-flex;
+  text-align: center;
+}
+
+
+
+
+#contacto
+{
+  width: 100%;
+  height: 250px;
+  top: 300px;
+  left: 30px;
+}
+.titulo_Contacto
+{
+  font-family: Oswald_SemiBold, sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: black;
+  padding-top: 50px;
+}
+
+.parrafo_Contacto
+{
+  width: 100%;
+  height: 100px;
+  /*background-color: royalblue;*/
+  font-family: Oswald_Regular , sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.boton_Contacto
+{
+  width: 150px;
+  height: 45px;
+  border-style: solid;
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  position: absolute;
+  margin-left: 46%;
+  margin-top: 3%;
+  border-radius: 0 25px 0 0;
+  font-family: Oswald_SemiBold;
+  font-size: 25px;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.boton_Contacto:hover
+{
+  background-color: #616D38;
+  color: white;
+}
+
+
+
+/*FOOTER*/
+#footer
+{
+  width: 100%;
+  height: 100px;
+  background-color: rgba(108, 122, 137, 0.4);
+  position: relative;
+  margin-top: 300px;
+}
+
+#footer img
+{
+  width: 90px;
+  height: auto;
+  margin-top: -15px;
+}
+
+.texto_footer
+{
+  display: inline-flex;
+  position: absolute;
+  left: 43%;
+  top: 50%;
+  font-family: Oswald_Regular;
+  font-size: 16px;
+}
+

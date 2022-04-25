@@ -1,0 +1,597 @@
+@font-face
+{
+	font-family: Oswald_Bold;
+	src: url("../fonts/Oswald-Bold.ttf");
+}
+
+@font-face
+{
+	font-family: Oswald_SemiBold;
+	src: url("../fonts/Oswald-SemiBold.ttf");
+}
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/************************************************************************************/
+
+/*CAPÇELERA*/
+
+body
+{
+	width: 100%;
+  height: 500px;
+/*	background-color: #F4DCC2;*/
+ 	background-image: url(../IMG/pexels-tom-fisk-2606532.jpg);
+
+}
+
+#cabecera 
+{
+	width: 100%;
+	height: 100px;
+	margin-top: 30px;
+	position: relative;
+}
+
+.logo img
+{
+	width: 15%;
+	height: auto;
+	cursor: pointer;
+	position: absolute;
+	left: 41%;
+	bottom: 10px;	
+	top: 20%;
+}
+
+nav div.logo_instagram i.fa-brands
+ {
+ 		position: absolute;
+ 		left: 93%;
+ 		top: 20%;
+}
+
+/*MENU*/
+
+input 
+{
+  display: none;
+}
+
+.open 
+{
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.open:before 
+{
+  content: "";
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after 
+{
+  content: "";
+  background-color: black;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen 
+{
+  width: 24px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  float: right;
+ 	position: absolute;
+ 	right: 60px;
+ 	bottom: 55px;
+}
+
+.menuOpen:hover .open:before 
+{
+  top: -9px;
+  background-color: #616D38;
+}
+
+.menuOpen:hover .open:after 
+{
+  top: 5px;
+  background-color: #616D38;
+}
+
+.menuOpen:hover .open:hover
+{
+	background-color: #616D38;
+}
+
+.menu 
+{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #616D38;
+  z-index: 899;
+}
+
+.menu label 
+{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent 
+{
+  position: relative;
+  top: 18%;
+  text-align: left;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+.menu ul 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a 
+{
+  display: block;
+  color: #E2BB80;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-left: 50px;
+  font-family: Oswald_Bold;
+  font-size: 120px;
+  text-align: center;
+}
+
+.menu ul li a:hover 
+{
+  color: #616D38;
+}
+
+.menu ul li:hover 
+{
+  background: #E2BB80;
+}
+
+.menuEffects 
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul 
+{
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects 
+{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul 
+{
+  opacity: 1;
+}
+
+
+#menuToggle:checked ~ .menuOpen .open 
+{
+  background-color: transparent;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before 
+{
+  content: "";
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after 
+{
+  content: "";
+  background-color: black;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  /*z-index: 1;*/
+  z-index: 999;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul 
+{
+  transform: translateY(-30%);
+}
+
+
+
+
+
+/*HERO*/
+
+#hero
+{
+	width: 100%;
+	height: 200px;
+}
+
+.marquee
+{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  top: 110%;
+  overflow-x: hidden;
+  background-color: rgba(108, 122, 137, 0.2);
+}
+
+.titulo 
+{
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+}
+
+.content
+{
+	font-family: Oswald_Bold;
+	font-size: 130px;
+}
+
+@keyframes marquee 
+{
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hero_cacao
+{
+	width: 100px;
+	height: auto;
+}
+
+.boton_hero
+{
+	width: 150px;
+	height: 45px;
+	border-style: solid;
+	color: white;
+	cursor: pointer;
+	list-style: none;
+	position: absolute;
+	margin-left: 45%;
+	margin-top: 17%;
+	border-radius: 0 25px 0 0;
+}
+
+.boton_hero a
+{
+	font-family: Oswald_SemiBold;
+	font-size: 25px;
+	list-style: none;
+	text-decoration: none;
+	padding-left: 15%;
+	color: white;
+}
+
+.boton_hero:hover
+{
+	color: #616D38;
+	background-color: #616D38;
+	transition: .3s;
+}
+
+
+.boton_hero a:hover
+{
+
+	color: white;
+}
+
+
+/*********************************** RESPONSIVE MOBILE ******************************/
+
+@media only screen and (max-width: 450px) {
+
+/*NO FUNCIONA EL HOVER */
+	/*CAPÇELERA*/
+	body
+	{
+	  height: auto;
+	}
+
+	#cabecera 
+	{
+		margin-top: 20px;
+	}
+
+	.logo img
+	{
+		width: 90px;
+		left: 10px;
+		bottom: 20px;	
+	}
+
+
+	/*MENU*/
+	.open 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.open:before 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.open:after 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.menuOpen 
+	{
+	  width: 20px;
+	 	right: 10px;
+	 	top: 25px;
+	}
+
+
+	.menu .menuContent 
+	{
+	  padding-bottom: 20px;
+	  margin-top: -100px;
+	}
+
+	.menu ul li a 
+	{
+	  padding-left: 10px;
+	  font-size: 70px;
+	}
+
+	/*HERO*/
+
+		#hero
+	{
+		width: 100%;
+		height: 100px;
+	}
+
+	.marquee
+	{
+	  height: 150px;
+	  top: 20px;
+	}
+
+	.content
+	{
+		font-family: Oswald_Bold;
+		font-size: 100px;
+	}
+
+	.hero_cacao
+	{
+		width: 70px;
+		height: auto;
+	}
+
+	.boton_hero
+	{
+		width: 150px;
+		height: 45px;
+		border-style: solid;
+		color: black;
+		cursor: pointer;
+		list-style: none;
+		position: absolute;
+		margin-left: 30%;
+		margin-top: 40%;
+		border-radius: 0 25px 0 0;
+	}
+
+	.boton_hero a
+	{
+		font-family: Oswald_SemiBold;
+		font-size: 25px;
+		list-style: none;
+		text-decoration: none;
+		padding-left: 15%;
+		color: black;
+	}
+
+	.boton_hero:active
+	{
+		color: #616D38;
+		background-color: #616D38;
+		transition: .3s;
+	}
+
+
+	.boton_hero a:active
+	{
+
+		color: white;
+	}
+
+
+
+}
+
+
+/*********************************** RESPONSIVE MOBILE HORIZONTAL ******************************/
+
+@media only screen and (min-width: 320px) {
+
+/*NO FUNCIONA EL HOVER */
+	/*CAPÇELERA*/
+	body
+	{
+	  height: auto;
+	}
+
+	#cabecera 
+	{
+		margin-top: 20px;
+	}
+
+	.logo img
+	{
+		width: 50%;
+		left: 27%;
+		top: 50%;	
+	}
+
+
+	/*MENU*/
+	.open 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.open:before 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.open:after 
+	{
+	  width: 20px;
+	  height: 3px;
+	}
+
+	.menuOpen 
+	{
+	  width: 20px;
+	 	right: 10px;
+	 	top: 25px;
+	}
+
+
+	.menu .menuContent 
+	{
+	  padding-bottom: 20px;
+	  margin-top: -30px;
+	}
+
+	.menu ul li a 
+	{
+	  padding-left: 10px;
+	  font-size: 80px;
+	}
+
+
+	/*HERO*/
+
+		#hero
+	{
+		width: 100%;
+		height: 100px;
+	}
+
+	.marquee
+	{
+	  height: 150px;
+	  top: 150%;
+	 }
+
+	.content
+	{
+		font-family: Oswald_Bold;
+		font-size: 100px;
+	}
+
+	.hero_cacao
+	{
+		width: 70px;
+		height: auto;
+	}
+
+	.boton_hero
+	{
+		width: 150px;
+		height: 45px;
+		margin-left: 35%;
+		margin-top: 70%;
+	}
+
+	.boton_hero a
+	{
+		font-family: Oswald_SemiBold;
+		font-size: 25px;
+		list-style: none;
+		text-decoration: none;
+		padding-left: 15%;
+		color: black;
+	}
+
+	.boton_hero:active
+	{
+		color: #616D38;
+		background-color: #616D38;
+		transition: .3s;
+	}
+
+
+	.boton_hero a:active
+	{
+		color: white;
+	}
+
+
+
+}
